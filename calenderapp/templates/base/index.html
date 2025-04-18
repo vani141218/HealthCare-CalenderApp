@@ -1,0 +1,753 @@
+{% extends 'base/main.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="calender">
+    <div class="left">
+        <img id="calender-icon" src="{% static 'images/calender_icon.png' %}" />
+       <h2><p id = "date"></p></h2>
+       <p id = "day"></p>
+       <p id = "month"></p>
+       <p id = "year"></p>
+    </div>
+
+    <div class="right">
+       <table>
+        <tr>
+            <td> </td>
+            <td id = "d1"></td>
+        </tr>
+
+        <tr>
+            <td> </td>
+            <td id = "d2"></td>
+        </tr>
+
+        <tr>
+            <td> </td>
+            <td id = "d3"></td>
+        </tr>
+
+        <tr>
+            <td> </td>
+            <td id = "d4"></td>
+        </tr>
+
+        <tr>
+            <td> </td>
+            <td id = "d5"></td>
+        </tr>
+
+        <tr>
+            <td> </td>
+            <td id = "d6"></td>
+        </tr>
+       </table>
+    </div>
+
+    <script>
+          const date = document.getElementById("date");
+          const day = document.getElementById("day");
+          const month = document.getElementById("month");
+          const year = document.getElementById("year");
+
+          const current_date = new Date();
+          console.log(current_date);
+
+          const weekDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+          const monthAll = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+          date.innerHTML = current_date.getDate();
+          day.innerHTML = weekDays[current_date.getDay()];
+          month.innerHTML = monthAll[current_date.getMonth()];
+          year.innerHTML = current_date.getFullYear();
+          var score = 3;
+
+           if (score >= 0 && score <= 4)
+           {
+                //daily routines, sunday, 0-4
+                if (weekDays[current_date.getDay()] == "Sunday") 
+               {
+                    const a = document.getElementById("d1")
+                    const b = document.getElementById("d2")
+                    const c = document.getElementById("d3")
+                    const d = document.getElementById("d4")
+                    const e = document.getElementById("d5")
+                    var d1 = "1. Go for outings with friends or family and make new friends"
+                    var d2 = "2. Eat balanced meals and stay hydrated"
+                    var d3 = "3. Set up a variety of team-building activites like hula hoop contests, egg races and water balloon tosses"
+                    var d4 = "4. Take some time and listen to soft music"
+                    var d5 = "5. Prepare for the next day by setting achievable goals."
+                    a.innerHTML = d1
+                    b.innerHTML = d2
+                    c.innerHTML = d3
+                    d.innerHTML = d4
+                    e.innerHTML = d5
+                }
+                
+                    //daily routine, monday, 0-4
+                 else if (weekDays[current_date.getDay()] == "Monday") 
+                {
+                    const a = document.getElementById("d1")
+                    const b = document.getElementById("d2")
+                    const c = document.getElementById("d3")
+                    const d = document.getElementById("d4")
+                    const e = document.getElementById("d5")
+                    var d1 = "1. Wake up at a consistent time."
+                    var d2 = "2. Do meditation for a few minutes."
+                    var d3 = "3. Pursue hobbies or interests you enjoy."
+                    var d4 = "4. Eat balanced meals and stay hydrated."
+                    var d5 = "5. Reflect on positive aspects of your day."
+                    a.innerHTML = d1
+                    b.innerHTML = d2
+                    c.innerHTML = d3
+                    d.innerHTML = d4
+                    e.innerHTML = d5
+                }
+
+    
+                   // daily routine, tuesday, 0-4 
+                  else if (weekDays[current_date.getDay()] == "Tuesday") 
+                {
+                    const a = document.getElementById("d1")
+                    const b = document.getElementById("d2")
+                    const c = document.getElementById("d3")
+                    const d = document.getElementById("d4")
+                    const e = document.getElementById("d5")
+                    var d1 = "1. Go for a morning walk."
+                    var d2 = "2. Practice deep breathing for a few minutes."
+                    var d3 = "3. Eat a nutritious breakfast."
+                    var d4 = "4. Watch your favourite show."
+                    var d5 = "5. Reflect on positive aspects of your day."
+                    a.innerHTML = d1
+                    b.innerHTML = d2
+                    c.innerHTML = d3
+                    d.innerHTML = d4
+                    e.innerHTML = d5
+                }
+                    //daily routine, wednesday, 0-4
+                   else if (weekDays[current_date.getDay()] == "Wednesday") 
+                {
+                    const a = document.getElementById("d1")
+                    const b = document.getElementById("d2")
+                    const c = document.getElementById("d3")
+                    const d = document.getElementById("d4")
+                    const e = document.getElementById("d5")
+                    var d1 = "1. Engage in physical exercise like yoga or home workouts."
+                    var d2 = "2. Do meditation for a few minutes."
+                    var d3 = "3. Spend time on activities you're good at."
+                    var d4 = "4. Eat balanced meals and stay hydrated."
+                    var d5 = "5. Get enough sleep (7-9 hours per night)."
+                    a.innerHTML = d1
+                    b.innerHTML = d2
+                    c.innerHTML = d3
+                    d.innerHTML = d4
+                    e.innerHTML = d5
+                }
+                    
+                    //daily routine, thursday, 0-4
+                   else if (weekDays[current_date.getDay()] == "Thursday") 
+                {
+                    const a = document.getElementById("d1")
+                    const b = document.getElementById("d2")
+                    const c = document.getElementById("d3")
+                    const d = document.getElementById("d4")
+                    const e = document.getElementById("d5")
+                    var d1 = "1. Go for a morning walk and enjoy nature."
+                    var d2 = "2. Set your creativity free by learning something new."
+                    var d3 = "3. Take sometime and listen some soft music."
+                    var d4 = "4. Eat nutritious food."
+                    var d5 = "5. Keep a journal and write about your thoughts and feelings."
+                    a.innerHTML = d1
+                    b.innerHTML = d2
+                    c.innerHTML = d3
+                    d.innerHTML = d4
+                    e.innerHTML = d5
+                }
+                    
+                    //daily routine, friday, 0-4
+                  else if (weekDays[current_date.getDay()] == "Friday") 
+                {
+                    const a = document.getElementById("d1")
+                    const b = document.getElementById("d2")
+                    const c = document.getElementById("d3")
+                    const d = document.getElementById("d4")
+                    const e = document.getElementById("d5")
+                    var d1 = "1. Engage in physical exercise like yoga or home workouts."
+                    var d2 = "2. Wind down a calming activity (like reading books)."
+                    var d3 = "3. Have a nutritious meal."
+                    var d4 = "4. Talk to a close friend or loved one."
+                    var d5 = "5. Limit screen time, especially before bedtime."
+                    a.innerHTML = d1
+                    b.innerHTML = d2
+                    c.innerHTML = d3
+                    d.innerHTML = d4
+                    e.innerHTML = d5
+                }
+             
+                     // daily routine, saturday, 0-4
+                   else //(weekDays[current_date.getDay()] == "Saturday") 
+                {
+                    const a = document.getElementById("d1")
+                    const b = document.getElementById("d2")
+                    const c = document.getElementById("d3")
+                    const d = document.getElementById("d4")
+                    const e = document.getElementById("d5")
+                    var d1 = "1. Practice deep breathing for a few minutes.."
+                    var d2 = "2. Devote your time in improving yourself."
+                    var d3 = "3. Pursue hobbies or interests you enjoy like riding, dancing, writing, playing, reading etc ."
+                    var d4 = "4. Help your loved ones in listening and solving their problems."
+                    var d5 = "5. Reflect on positive aspects of your day."
+                    a.innerHTML = d1
+                    b.innerHTML = d2
+                    c.innerHTML = d3
+                    d.innerHTML = d4
+                    e.innerHTML = d5
+                }
+            }
+              
+
+            else if (score >= 5 && score <= 9)
+            {
+                 //daily routines, sunday, 5-9
+                if (weekDays[current_date.getDay()] == "Sunday") 
+               {
+                    const a = document.getElementById("d1")
+                    const b = document.getElementById("d2")
+                    const c = document.getElementById("d3")
+                    const d = document.getElementById("d4")
+                    const e = document.getElementById("d5")
+                    const f = document.getElementById("d6")
+                    var d1 = "1. Go for a morning walk"
+                    var d2 = "2. Eat balanced meals and stay hydrated"
+                    var d3 = "3. Set up a variety of team-building activites like hula hoop contests, egg races and water balloon tosses"
+                    var d4 = "4. Take some time and listen to soft music"
+                    var d5 = "5. Reach out to a therapist or counselor support"
+                    var d6 = "6. Prepare for the next day by setting achievable goals."
+                    
+                    a.innerHTML = d1
+                    b.innerHTML = d2
+                    c.innerHTML = d3
+                    d.innerHTML = d4
+                    e.innerHTML = d5
+                    f.innerHTML = d6
+                }
+                
+                    //daily routine, monday, 5-9
+                 else if (weekDays[current_date.getDay()] == "Monday") 
+                {
+                    const a = document.getElementById("d1")
+                    const b = document.getElementById("d2")
+                    const c = document.getElementById("d3")
+                    const d = document.getElementById("d4")
+                    const e = document.getElementById("d5")
+                    const f = document.getElementById("d6")
+                    var d1 = "1. Wake up at a consistent time."
+                    var d2 = "2. Do meditation for a few minutes."
+                    var d3 = "3. Attend regular therapy sessions, whether in-person or via telehealth"
+                    var d4 = "4. Pursue hobbies or interests you enjoy."
+                    var d5 = "5. Eat balanced meals and stay hydrated."
+                    var d6 = "6. Reflect on positive aspects of your day."
+                     
+                    a.innerHTML = d1
+                    b.innerHTML = d2
+                    c.innerHTML = d3
+                    d.innerHTML = d4
+                    e.innerHTML = d5
+                    f.innerHTML = d6
+                }
+
+    
+                   // daily routine, tuesday, 5-9 
+                  else if (weekDays[current_date.getDay()] == "Tuesday") 
+                {
+                    const a = document.getElementById("d1")
+                    const b = document.getElementById("d2")
+                    const c = document.getElementById("d3")
+                    const d = document.getElementById("d4")
+                    const e = document.getElementById("d5")
+                    const f = document.getElementById("d6")
+                    var d1 = "1. Go for a morning walk."
+                    var d2 = "2. Practice deep breathing for a few minutes."
+                    var d3 = "3. Eat a nutritious breakfast."
+                    var d4 = "4. Consider guided relaxation or meditation sessions."
+                    var d5 = "5. Watch your favourite show."
+                    var d6 = "6. Reflect on positive aspects of your day."
+                    a.innerHTML = d1
+                    b.innerHTML = d2
+                    c.innerHTML = d3
+                    d.innerHTML = d4
+                    e.innerHTML = d5
+                    f.innerHTML = d6
+                }
+                    //daily routine, wednesday, 5-9
+                   else if (weekDays[current_date.getDay()] == "Wednesday") 
+                {
+                    const a = document.getElementById("d1")
+                    const b = document.getElementById("d2")
+                    const c = document.getElementById("d3")
+                    const d = document.getElementById("d4")
+                    const e = document.getElementById("d5")
+                    const f = document.getElementById("d6")
+                    var d1 = "1. Engage in physical exercise like yoga or home workouts."
+                    var d2 = "2. Do meditation for a few minutes."
+                    var d3 = "3. Spend time on activities you're good at."
+                    var d4 = "4. Practice mindfulness exercises daily and consider guided relaxation."
+                    var d5 = "5. Eat balanced meals and stay hydrated."
+                    var d6 = "6. Get enough sleep (7-9 hours per night)."
+                    a.innerHTML = d1
+                    b.innerHTML = d2
+                    c.innerHTML = d3
+                    d.innerHTML = d4
+                    e.innerHTML = d5
+                    f.innerHTML = d6
+                }
+                    
+                    //daily routine, thursday, 5-9
+                   else if (weekDays[current_date.getDay()] == "Thursday") 
+                {
+                    const a = document.getElementById("d1")
+                    const b = document.getElementById("d2")
+                    const c = document.getElementById("d3")
+                    const d = document.getElementById("d4")
+                    const e = document.getElementById("d5")
+                    const f = document.getElementById("d6")
+                    var d1 = "1. Go for a morning walk and enjoy nature."
+                    var d2 = "2. Set your creativity free by learning something new."
+                    var d3 = "3. Reach out to a therapist or counselor for support."
+                    var d4 = "4. Take sometime and listen some soft music."
+                    var d5 = "5. Eat nutritious food."
+                    var d6 = "6. Keep a journal and write about your thoughts and feelings."
+                    a.innerHTML = d1
+                    b.innerHTML = d2
+                    c.innerHTML = d3
+                    d.innerHTML = d4
+                    e.innerHTML = d5
+                    f.innerHTML = d6
+                }
+                    
+                    //daily routine, friday, 5-9
+                  else if (weekDays[current_date.getDay()] == "Friday") 
+                {
+                    const a = document.getElementById("d1")
+                    const b = document.getElementById("d2")
+                    const c = document.getElementById("d3")
+                    const d = document.getElementById("d4")
+                    const e = document.getElementById("d5")
+                    const f = document.getElementById("d6")
+                    var d1 = "1. Engage in physical exercise like yoga or home workouts."
+                    var d2 = "2. Wind down a calming activity (like reading books)."
+                    var d3 = "3. Attend regular therapy sessions, whether in-person or via telehealth."
+                    var d4 = "4. Have a nutritious meal."
+                    var d5 = "5. Talk to a close friend or loved one."
+                    var d6 = "6. Limit screen time, especially before bedtime."
+                    a.innerHTML = d1
+                    b.innerHTML = d2
+                    c.innerHTML = d3
+                    d.innerHTML = d4
+                    e.innerHTML = d5
+                    f.innerHTML = d6
+                }
+             
+                     // daily routine, saturday, 5-9
+                   else // (weekDays[current_date.getDay()] == "Saturday") 
+                {
+                    const a = document.getElementById("d1")
+                    const b = document.getElementById("d2")
+                    const c = document.getElementById("d3")
+                    const d = document.getElementById("d4")
+                    const e = document.getElementById("d5")
+                    const f = document.getElementById("d6")
+                    var d1 = "1. Practice deep breathing for a few minutes.."
+                    var d2 = "2. Devote your time in improving yourself."
+                    var d3 = "3. Pursue hobbies or interests you enjoy like riding, dancing, writing, playing, reading etc ."
+                    var d4 = "4. Practice mindfulness exercises daily."
+                    var d5 = "5. Consider guided relaxation or meditation sessions."
+                    var d6 = "6. Reflect on positive aspects of your day."
+                    a.innerHTML = d1
+                    b.innerHTML = d2
+                    c.innerHTML = d3
+                    d.innerHTML = d4
+                    e.innerHTML = d5
+                    f.innerHTML = d6
+                }
+            }
+             
+
+            else if (score >= 10 && score <= 19)
+            {
+                 //daily routines, sunday, 10-19
+                if (weekDays[current_date.getDay()] == "Sunday") 
+               {
+                    const a = document.getElementById("d1")
+                    const b = document.getElementById("d2")
+                    const c = document.getElementById("d3")
+                    const d = document.getElementById("d4")
+                    const e = document.getElementById("d5")
+                    const f = document.getElementById("d6")
+                    var d1 = "1. Go for a morning walk"
+                    var d2 = "2. Eat balanced meals and stay hydrated"
+                    var d3 = "3. Follow the guidance of your therapist or psychiatrist regarding treatment."
+                    var d4 = "4. Maintain a detailed daily schedule to keep yourself organized."
+                    var d5 = "5. Practice self-compassion and avoid self-criticism."
+                    var d6 = "6. Prepare for the next day by setting achievable goals."
+                    
+                    a.innerHTML = d1
+                    b.innerHTML = d2
+                    c.innerHTML = d3
+                    d.innerHTML = d4
+                    e.innerHTML = d5
+                    f.innerHTML = d6
+                }
+                
+                    //daily routine, monday, 10-19
+                 else if (weekDays[current_date.getDay()] == "Monday") 
+                {
+                    const a = document.getElementById("d1")
+                    const b = document.getElementById("d2")
+                    const c = document.getElementById("d3")
+                    const d = document.getElementById("d4")
+                    const e = document.getElementById("d5")
+                    const f = document.getElementById("d6")
+                     
+                    var d1 = "1. Do meditation for a few minutes."
+                    var d2 = "2. Attend regular therapy sessions, whether in-person or via telehealth"
+                    var d3 = "3. Take prescribed medications as directed."
+                    var d4 = "4. Pursue hobbies or interests you enjoy."
+                    var d5 = "5. Eat balanced meals and stay hydrated."
+                    var d6 = "6. Challenge negative thoughts with cognitive-behavioral techniques."
+                     
+
+                    a.innerHTML = d1
+                    b.innerHTML = d2
+                    c.innerHTML = d3
+                    d.innerHTML = d4
+                    e.innerHTML = d5
+                    f.innerHTML = d6
+                }
+
+    
+                   // daily routine, tuesday, 10-19
+                  else if (weekDays[current_date.getDay()] == "Tuesday") 
+                {
+                    const a = document.getElementById("d1")
+                    const b = document.getElementById("d2")
+                    const c = document.getElementById("d3")
+                    const d = document.getElementById("d4")
+                    const e = document.getElementById("d5")
+                    const f = document.getElementById("d6")
+                    var d1 = "1. Follow the guidance of your therapist or psychiatrist regarding treatment."
+                    var d2 = "2. Practice deep breathing for a few minutes."
+                    var d3 = "3. Eat a nutritious breakfast."
+                    var d4 = "4. Consider guided relaxation or meditation sessions."
+                    var d5 = "5. Break tasks into manageable steps."
+                    var d6 = "6. Practice self-compassion and avoid self-criticism."
+                    a.innerHTML = d1
+                    b.innerHTML = d2
+                    c.innerHTML = d3
+                    d.innerHTML = d4
+                    e.innerHTML = d5
+                    f.innerHTML = d6
+                }
+                    //daily routine, wednesday, 10-19
+                   else if (weekDays[current_date.getDay()] == "Wednesday") 
+                {
+                    const a = document.getElementById("d1")
+                    const b = document.getElementById("d2")
+                    const c = document.getElementById("d3")
+                    const d = document.getElementById("d4")
+                    const e = document.getElementById("d5")
+                    const f = document.getElementById("d6")
+                    
+                    var d1 = "1. Do meditation for a few minutes and try to relax your mind."
+                    var d2 = "2. Take prescribed medications as directed."
+                    var d3 = "3. Spend time on activities you're good at."
+                    var d4 = "4. Practice mindfulness exercises daily and consider guided relaxation."
+                    var d5 = "5. Eat balanced meals and stay hydrated."
+                    var d6 = "6. Get enough sleep (7-9 hours per night)."
+                    a.innerHTML = d1
+                    b.innerHTML = d2
+                    c.innerHTML = d3
+                    d.innerHTML = d4
+                    e.innerHTML = d5
+                    f.innerHTML = d6
+                }
+                    
+                    //daily routine, thursday, 10-19
+                   else if (weekDays[current_date.getDay()] == "Thursday") 
+                {
+                    const a = document.getElementById("d1")
+                    const b = document.getElementById("d2")
+                    const c = document.getElementById("d3")
+                    const d = document.getElementById("d4")
+                    const e = document.getElementById("d5")
+                    const f = document.getElementById("d6")
+                    var d1 = "1. Follow the guidance of your therapist or psychiatrist regarding treatment.."
+                    var d2 = "2. Set your creativity free by learning something new."
+                    var d3 = "3. Ask for help id you need and talk to your dear ones."
+                    var d4 = "4. Practice self-compassion and avoid self-criticism."
+                    var d5 = "5. Eat nutritious food."
+                    var d6 = "6. Keep a journal and write about your thoughts and feelings."
+                    a.innerHTML = d1
+                    b.innerHTML = d2
+                    c.innerHTML = d3
+                    d.innerHTML = d4
+                    e.innerHTML = d5
+                    f.innerHTML = d6
+                }
+                    
+                    //daily routine, friday, 10-19
+                  else if (weekDays[current_date.getDay()] == "Friday") 
+                {
+                    const a = document.getElementById("d1")
+                    const b = document.getElementById("d2")
+                    const c = document.getElementById("d3")
+                    const d = document.getElementById("d4")
+                    const e = document.getElementById("d5")
+                    const f = document.getElementById("d6")
+                    var d1 = "1. Engage in physical exercise like yoga or home workouts."
+                    var d2 = "2. Wind down a calming activity (like reading books)."
+                    var d3 = "3. Attend regular therapy sessions, whether in-person or via telehealth."
+                    var d4 = "4. Have a nutritious meal and reduce intake of caffeine."
+                    var d5 = "5. Take prescribed medications as directed.."
+                    var d6 = "6. Limit screen time, especially before bedtime."
+                    a.innerHTML = d1
+                    b.innerHTML = d2
+                    c.innerHTML = d3
+                    d.innerHTML = d4
+                    e.innerHTML = d5
+                    f.innerHTML = d6
+                }
+             
+                     // daily routine, saturday, 10-19
+                   else // (weekDays[current_date.getDay()] == "Saturday") 
+                {
+                    const a = document.getElementById("d1")
+                    const b = document.getElementById("d2")
+                    const c = document.getElementById("d3")
+                    const d = document.getElementById("d4")
+                    const e = document.getElementById("d5")
+                    const f = document.getElementById("d6")
+                    var d1 = "1. Practice deep breathing for a few minutes.."
+                    var d2 = "2. Follow the guidance of your therapist or psychiatrist regarding treatment."
+                    var d3 = "3. Pursue hobbies or interests you enjoy like riding, dancing, writing, playing, reading etc ."
+                    var d4 = "4. Practice mindfulness exercises daily."
+                    var d5 = "5. Consider guided relaxation or meditation sessions."
+                    var d6 = "6. Challenge negative thoughts with cognitive-behavioral techniques and reflect on positive aspects of your day."
+                    a.innerHTML = d1
+                    b.innerHTML = d2
+                    c.innerHTML = d3
+                    d.innerHTML = d4
+                    e.innerHTML = d5
+                    f.innerHTML = d6
+                }
+
+            }
+  
+            
+            else if (score >= 20 && score <= 29)
+            {
+                 //daily routines, sunday, 20-29
+                if (weekDays[current_date.getDay()] == "Sunday") 
+               {
+                    const a = document.getElementById("d1")
+                    const b = document.getElementById("d2")
+                    const c = document.getElementById("d3")
+                    const d = document.getElementById("d4")
+                    const e = document.getElementById("d5")
+                    const f = document.getElementById("d6")
+                    var d1 = "1. Engage in more frequent therapy sessions, if recommended."
+                    var d2 = "2. Eat balanced meals and stay hydrated"
+                    var d3 = "3. Follow the guidance of your therapist or psychiatrist regarding treatment."
+                    var d4 = "4. Maintain a detailed daily schedule to keep yourself organized."
+                    var d5 = "5. Practice self-compassion and avoid self-criticism."
+                    var d6 = "6. Don't carry your stress or burdens alone."
+                    
+                    a.innerHTML = d1
+                    b.innerHTML = d2
+                    c.innerHTML = d3
+                    d.innerHTML = d4
+                    e.innerHTML = d5
+                    f.innerHTML = d6
+                }
+                
+                    //daily routine, monday, 20-29
+                 else if (weekDays[current_date.getDay()] == "Monday") 
+                {
+                    const a = document.getElementById("d1")
+                    const b = document.getElementById("d2")
+                    const c = document.getElementById("d3")
+                    const d = document.getElementById("d4")
+                    const e = document.getElementById("d5")
+                    const f = document.getElementById("d6")
+                     
+                    var d1 = "1. Do meditation for a few minutes."
+                    var d2 = "2. Attend regular therapy sessions, whether in-person or via telehealth"
+                    var d3 = "3. Take prescribed medications as directed."
+                    var d4 = "4. Explore alternative therapy modalities like group therpy or Dialectical Behavior Therapy."
+                    var d5 = "5. Eat balanced meals and stay hydrated."
+                    var d6 = "6. Lean on your support network, friends and family."
+                     
+
+                    a.innerHTML = d1
+                    b.innerHTML = d2
+                    c.innerHTML = d3
+                    d.innerHTML = d4
+                    e.innerHTML = d5
+                    f.innerHTML = d6
+                }
+
+    
+                   // daily routine, tuesday, 20-29
+                  else if (weekDays[current_date.getDay()] == "Tuesday") 
+                {
+                    const a = document.getElementById("d1")
+                    const b = document.getElementById("d2")
+                    const c = document.getElementById("d3")
+                    const d = document.getElementById("d4")
+                    const e = document.getElementById("d5")
+                    const f = document.getElementById("d6")
+                    var d1 = "1. Follow the guidance of your therapist or psychiatrist regarding treatment."
+                    var d2 = "2. Practice deep breathing for a few minutes."
+                    var d3 = "3. Eat a nutritious breakfast."
+                    var d4 = "4. Consider involving a trusted person in your treatment plan."
+                    var d5 = "5. Break tasks into manageable steps."
+                    var d6 = "6. Practice self-compassion and avoid self-criticism."
+                    a.innerHTML = d1
+                    b.innerHTML = d2
+                    c.innerHTML = d3
+                    d.innerHTML = d4
+                    e.innerHTML = d5
+                    f.innerHTML = d6
+                }
+                    //daily routine, wednesday, 20-29
+                   else if (weekDays[current_date.getDay()] == "Wednesday") 
+                {
+                    const a = document.getElementById("d1")
+                    const b = document.getElementById("d2")
+                    const c = document.getElementById("d3")
+                    const d = document.getElementById("d4")
+                    const e = document.getElementById("d5")
+                    const f = document.getElementById("d6")
+                    
+                    var d1 = "1. Getting outside benefits your mental health by improving mood, promoting relaxation and reducing feelings of stress."
+                    var d2 = "2. Take prescribed medications as directed."
+                    var d3 = "3. Spend time on activities you're good at."
+                    var d4 = "4. Practice mindfulness exercises daily and consider guided relaxation."
+                    var d5 = "5. Eat balanced meals and stay hydrated."
+                    var d6 = "6. Get enough sleep (7-9 hours per night)."
+                    a.innerHTML = d1
+                    b.innerHTML = d2
+                    c.innerHTML = d3
+                    d.innerHTML = d4
+                    e.innerHTML = d5
+                    f.innerHTML = d6
+                }
+                    
+                    //daily routine, thursday, 10-19
+                   else if (weekDays[current_date.getDay()] == "Thursday") 
+                {
+                    const a = document.getElementById("d1")
+                    const b = document.getElementById("d2")
+                    const c = document.getElementById("d3")
+                    const d = document.getElementById("d4")
+                    const e = document.getElementById("d5")
+                    const f = document.getElementById("d6")
+                    var d1 = "1. Follow the guidance of your therapist or psychiatrist regarding treatment.."
+                    var d2 = "2. Volunteering your time in the activities you are good at."
+                    var d3 = "3. Ask for help if you need and talk to your dear ones."
+                    var d4 = "4. Practice self-compassion and avoid self-criticism."
+                    var d5 = "5. Eat nutritious food."
+                    var d6 = "6. Keep a journal and write about your thoughts and feelings."
+                    a.innerHTML = d1
+                    b.innerHTML = d2
+                    c.innerHTML = d3
+                    d.innerHTML = d4
+                    e.innerHTML = d5
+                    f.innerHTML = d6
+                }
+                    
+                    //daily routine, friday, 20-29
+                  else if (weekDays[current_date.getDay()] == "Friday") 
+                {
+                    const a = document.getElementById("d1")
+                    const b = document.getElementById("d2")
+                    const c = document.getElementById("d3")
+                    const d = document.getElementById("d4")
+                    const e = document.getElementById("d5")
+                    const f = document.getElementById("d6")
+                    var d1 = "1. Consider seeking professional support they will navigate whatever you're going through."
+                    var d2 = "2. Wind down a calming activity (like reading books)."
+                    var d3 = "3. Attend regular therapy sessions, whether in-person or via telehealth."
+                    var d4 = "4. Have a nutritious meal and reduce intake of caffeine."
+                    var d5 = "5. Take prescribed medications as directed."
+                    var d6 = "6. Limit screen time, especially before bedtime."
+                    a.innerHTML = d1
+                    b.innerHTML = d2
+                    c.innerHTML = d3
+                    d.innerHTML = d4
+                    e.innerHTML = d5
+                    f.innerHTML = d6
+                }
+             
+                     // daily routine, saturday, 10-19
+                   else // (weekDays[current_date.getDay()] == "Saturday") 
+                {
+                    const a = document.getElementById("d1")
+                    const b = document.getElementById("d2")
+                    const c = document.getElementById("d3")
+                    const d = document.getElementById("d4")
+                    const e = document.getElementById("d5")
+                    const f = document.getElementById("d6")
+                    var d1 = "1. Practice deep breathing for a few minutes."
+                    var d2 = "2. Follow the guidance of your therapist or psychiatrist regarding treatment."
+                    var d3 = "3. Pursue hobbies or interests you enjoy like riding, dancing, writing, playing, reading etc ."
+                    var d4 = "4. Practice mindfulness exercises daily."
+                    var d5 = "5. Don't carry your stress or burdens alone and seek for professional support."
+                    var d6 = "6. Challenge negative thoughts with cognitive-behavioral techniques and reflect on positive aspects of your day."
+                    a.innerHTML = d1
+                    b.innerHTML = d2
+                    c.innerHTML = d3
+                    d.innerHTML = d4
+                    e.innerHTML = d5
+                    f.innerHTML = d6
+                }
+
+            }
+
+            else //(score => 30 && score <= 36)
+            {       // daily routine, 30-36
+                   if (weekDays[current_date.getDay()] == weekDays[current_date.getDay()]) 
+                {
+                    const a = document.getElementById("d1")
+                    const b = document.getElementById("d2")
+                    //const c = document.getElementById("d3")
+                    //const d = document.getElementById("d4")
+                    const e = document.getElementById("d5")
+                    
+                    var d1 = "You should seek immediate professional help, and a daily routine may need to be customized based on their specific needs."
+                    var d2 = "Hospitalization or intensive outpatient programs may be necessary for safety and stabilization."
+                    //var d3 = "Please remember that these routines are general guidelines."
+                   // var d4 = "It's essential to work closely with mental health professionals to create a personalized plan."
+                    var d5 = "Consistent communication with a healthcare provider is crucial for monitoring progress and adjusting the treatment plan as necessary."
+                    
+                    a.innerHTML = d1
+                    b.innerHTML = d2
+                    //c.innerHTML = d3
+                   // d.innerHTML = d4
+                    e.innerHTML = d5
+                    
+                }
+            }
+          
+
+
+
+    </script>
+    <script type="text/javascript" src="{% static 'js/stream.js' %}"></script>
+    
+
+</div>
+
+{% endblock content %}
